@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="header_servers"
+        android:title="@string/pref_servers"
+        android:order="0">
+        <Preference
+            android:key="header_addserver"
+            android:title="@string/pref_addserver"
+            android:order="99" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="watch_directories"
+        android:title="@string/pref_dirs"
+        android:order="100">
+        <Preference
+            android:key="header_adddir"
+            android:title="@string/pref_adddir"
+            android:order="199" />
+    </PreferenceCategory>
+
+    <!--
+    Odd numbering scheme taken from Transdroid source
+    Header is 100k
+    Nested structs are 100(k+1)-1,2,...
+    -->
+
+</PreferenceScreen>
