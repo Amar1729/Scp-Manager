@@ -22,6 +22,7 @@ public class MainPage extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(onFabClicked);
         /*
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +31,7 @@ public class MainPage extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        */
+        //*/
     }
 
     @Override
@@ -49,29 +50,24 @@ public class MainPage extends AppCompatActivity {
 
         if (id == R.id.action_settings) {
             // Show app settings UI
-            //mainSettingsActivity.intent(this).start();
 
-            Intent intent = new Intent(this, mainSettingsActivity.class);
+            Intent intent = new Intent(MainPage.this, MainSettingsActivity.class);
             startActivity(intent);
+
+            // From transdroid:
+            // WebsearchSettingsActivity_.intent(MainSettingsActivity.this).start();
+            // My derivation:
+            // MainSettingsActivity.intent(MainPage.this).start();
 
             return true;
         }
 
         if (id == R.id.send_tors) {
             // Try to send tors
-            // Bring up UI to double-check
+            // Bring up dialog to double-check
             // Sort tors into buckets (i.e. movies, tv shows, etc)
             // Ask for confirmation, then send
-            Toast.makeText(this, "Files sent! Woo! (not really tho yet)", Toast.LENGTH_LONG).show();
-
-            return true;
-        }
-
-        if (id == R.id.fab) {
-            // Bring up UI for adding torrent (file explorer?)
-            Toast.makeText(this, "I will attempt to add a torrent :'(", Toast.LENGTH_LONG).show();
-
-
+            Toast.makeText(this, "Files sent! Woo! (not really tho yet)", Toast.LENGTH_SHORT).show();
 
             return true;
         }
@@ -79,4 +75,15 @@ public class MainPage extends AppCompatActivity {
         // Default case
         return super.onOptionsItemSelected(item);
     }
+
+    private View.OnClickListener onFabClicked = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(MainPage.this, "I will attempt to add a torrent :(", Toast.LENGTH_SHORT).show();
+
+            // This probably doesn't work yet - does FPH need a layout?
+            Intent intent = new Intent(MainPage.this, FilePickerHelper.class);
+            startActivity(intent);
+        }
+    };
 }

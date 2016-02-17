@@ -5,7 +5,7 @@
     <string name="pref_addserver">Add Server</string>
     <string name="pref_dirs">Watch Directories</string>
     <string name="pref_adddir">Add Directory</string>
-    <string name="pref_name">Server Name</string>
+    <string name="pref_name">Server Nickname</string>
     <string name="pref_name_optional">Server Nickname</string>
     <string name="pref_address">Hostname</string>
     <string name="pref_user">Username</string>

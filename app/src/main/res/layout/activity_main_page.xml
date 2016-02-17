@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorMain"
+            android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
@@ -29,9 +29,10 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
+        android:layout_margin="20dp"
         android:src="@android:drawable/ic_menu_add"
-        android:scaleType="fitXY"/>
+        android:padding="10dp"
+        android:scaleType="center" />
 
     <!--
     android:src="@android:drawable/ic_dialog_email" />
