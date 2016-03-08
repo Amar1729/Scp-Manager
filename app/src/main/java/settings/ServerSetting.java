@@ -99,7 +99,9 @@ public class ServerSetting {
         return this.key;
     }
 
-    public String getHumanReadableId() {
+    public String getId() {
+        if (getAddress() == null || getAddress().equals(""))
+            return null;
         return "http://" + this.getUsername() + "@" + getAddress() + ":" + getPort();
     }
 
