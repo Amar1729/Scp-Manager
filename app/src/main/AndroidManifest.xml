@@ -36,14 +36,17 @@
         <!-- Settings activities -->
         <activity
             android:name=".MainSettingsActivity"
+            android:theme="@style/DefaultToolbar"
             android:parentActivityName="com.gtstudios.amar.scphelper.MainPage">
         </activity>
         <activity
             android:name=".ServerSettingsActivity"
+            android:theme="@style/DefaultToolbar"
             android:parentActivityName=".MainSettingsActivity">
         </activity>
         <activity
             android:name=".WatchSettingsActivity"
+            android:theme="@style/DefaultToolbar"
             android:parentActivityName=".MainSettingsActivity">
         </activity>
 
