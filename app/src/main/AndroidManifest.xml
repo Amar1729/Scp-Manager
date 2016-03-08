@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".MainPage"
             android:label="@string/app_name"
@@ -33,9 +34,18 @@
         </activity>
 
         <!-- Settings activities -->
-        <activity android:name=".MainSettingsActivity"></activity>
-        <activity android:name=".ServerSettingsActivity"></activity>
-        <activity android:name=".WatchSettingsActivity"></activity>
+        <activity
+            android:name=".MainSettingsActivity"
+            android:parentActivityName="com.gtstudios.amar.scphelper.MainPage">
+        </activity>
+        <activity
+            android:name=".ServerSettingsActivity"
+            android:parentActivityName=".MainSettingsActivity">
+        </activity>
+        <activity
+            android:name=".WatchSettingsActivity"
+            android:parentActivityName=".MainSettingsActivity">
+        </activity>
 
         <!-- File Chooser Activity (not working yet? -->
 

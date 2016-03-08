@@ -55,9 +55,9 @@ public class ServerSettingsActivity extends PreferenceActivity {
         findPreference("server_user").setOnPreferenceClickListener(onUsername);
         findPreference("server_pass").setOnPreferenceClickListener(onPassword);
     }
-
+/*
     @Override
     public void onBuildHeaders(List<Header> target) {
         super.onBuildHeaders(target);
-    }
+    }*/
 }

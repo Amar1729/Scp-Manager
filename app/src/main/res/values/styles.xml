@@ -8,6 +8,14 @@
         <item name="colorAccent">@color/colorAccent2</item>
     </style>
 
+    <!-- Added from Transdroid / styles.xml
+        (Trying to support default toolbar on all layouts) -->
+    <style name="DefaultToolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

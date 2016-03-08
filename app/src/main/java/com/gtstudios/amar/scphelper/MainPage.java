@@ -82,8 +82,8 @@ public class MainPage extends AppCompatActivity {
             Toast.makeText(MainPage.this, "I will attempt to add a torrent :(", Toast.LENGTH_SHORT).show();
 
             // This probably doesn't work yet - does FPH need a layout?
-            Intent intent = new Intent(MainPage.this, FilePickerHelper.class);
-            startActivity(intent);
+            //Intent intent = new Intent(MainPage.this, FilePickerHelper.class);
+            //startActivity(intent);
         }
     };
 }

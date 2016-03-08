@@ -38,9 +38,9 @@ public class WatchSettingsActivity extends PreferenceActivity {
         findPreference("dir_path").setOnPreferenceClickListener(onDirPath);
         findPreference("dir_name").setOnPreferenceClickListener(onDirName);
     }
-
+/*
     @Override
     public void onBuildHeaders(List<Header> target) {
         super.onBuildHeaders(target);
-    }
+    }*/
 }
