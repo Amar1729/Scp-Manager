@@ -1,8 +1,10 @@
-package com.gtstudios.amar.scphelper;
+package com.gtstudios.amar.scphelper.settings;
 
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+
+import com.gtstudios.amar.scphelper.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.gtstudios.amar.scphelper;
+package com.gtstudios.amar.scphelper.settings;
 
 import android.content.Context;
 import android.preference.Preference;
