@@ -13,4 +13,7 @@
     <string name="pref_path">Path to Directory</string>
     <string name="pref_dirname">Directory Nickname</string>
     <string name="search_filemanagernotfound">File Manager not found ...</string>
+
+    <string name="pref_defaultserver_lastused">Last used</string>
+    <string name="pref_defaultserver_askonadd">Ask when adding a file</string>
 </resources>
