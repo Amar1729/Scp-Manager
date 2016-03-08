@@ -7,3 +7,6 @@
 /build
 /captures
 .*~
+app/src/test
+app/src/androidTest
+

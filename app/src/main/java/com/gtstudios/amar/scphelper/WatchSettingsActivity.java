@@ -1,5 +1,6 @@
 package com.gtstudios.amar.scphelper;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
@@ -10,6 +11,8 @@ import java.util.List;
  * Created by Amar on 2/17/16.
  */
 public class WatchSettingsActivity extends PreferenceActivity {
+
+    protected SharedPreferences prefs;
 
     private Preference.OnPreferenceClickListener onDirPath = new Preference.OnPreferenceClickListener() {
         @Override
@@ -31,6 +34,11 @@ public class WatchSettingsActivity extends PreferenceActivity {
         super.onCreate(savedInstanceState);
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        prefs = getPreferenceManager().getSharedPreferences();
+        if (getPreferenceScreen() != null) {
+            getPreferenceScreen().removeAll();
+        }
 
         addPreferencesFromResource(R.xml.pref_dirs);
 

@@ -58,10 +58,9 @@ public class MainSettingsActivity extends PreferenceActivity {
     public void onResume() {
         super.onResume();
 
-        //getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // This should clear duped headers from the screen (since this is resume, not create)\
+        // This should clear duped stuff from the screen (since this is resume, not create)
         prefs = getPreferenceManager().getSharedPreferences();
         if (getPreferenceScreen() != null) {
             getPreferenceScreen().removeAll();
