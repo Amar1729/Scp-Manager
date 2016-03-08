@@ -30,9 +30,10 @@
         android:layout_height="56dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
-        android:src="@android:drawable/ic_menu_add"
-        android:padding="10dp"
-        android:scaleType="center" />
+        android:src="@mipmap/ic_add_white"
+        android:padding="16dp"
+        android:scaleType="fitXY"
+        />
 
     <!--
     android:src="@android:drawable/ic_dialog_email" />
