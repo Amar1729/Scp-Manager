@@ -102,7 +102,9 @@ public class ServerSetting {
     public String getId() {
         if (getAddress() == null || getAddress().equals(""))
             return null;
-        return "http://" + this.getUsername() + "@" + getAddress() + ":" + getPort();
+
+        // Check if port is null? Don't need port for scp since it's on port 22 (?)
+        return "http://" + this.getUsername() + "@" + getAddress() + (getPort() == 0 ? "" : ":" + getPort());
     }
 
     // Didn't include the following functions
