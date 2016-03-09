@@ -20,6 +20,7 @@ import java.util.List;
 
 import settings.ServerSetting;
 import settings.ApplicationSettings;
+//import settings.ApplicationSettings2;
 
 import com.gtstudios.amar.scphelper.R;
 import com.gtstudios.amar.scphelper.settings.ServerPreference.OnServerClickedListener;
@@ -94,13 +95,23 @@ public class MainSettingsActivity extends PreferenceActivity {
         // Keep a list of the server codes and names (for default server selection)
         List<String> serverCodes = new ArrayList<>();
         List<String> serverNames = new ArrayList<>();
+
         serverCodes.add(Integer.toString(ApplicationSettings.DEFAULTSERVER_LASTUSED));
+        //serverCodes.add(Integer.toString(ApplicationSettings2.DEFAULTSERVER_LASTUSED));
         serverCodes.add(Integer.toString(ApplicationSettings.DEFAULTSERVER_ASKONADD));
+        //serverCodes.add(Integer.toString(ApplicationSettings2.DEFAULTSERVER_ASKONADD));
+
         serverNames.add(getString(R.string.pref_defaultserver_lastused));
         serverNames.add(getString(R.string.pref_defaultserver_askonadd));
 
+        // Don't render existing servers until I can figure out static/nonstatic
+        //      differences in ApplicationSettings.java
+
+        /*
         // Add existing servers
-        List<ServerSetting> servers = ApplicationSettings.getServerSettings();
+        //ApplicationSettings aps = new ApplicationSettings();
+        //List<ServerSetting> servers = aps.getServerSettings();
+        List<ServerSetting> servers = ApplicationSettings2.getServerSettings();
         for (ServerSetting serverSetting : servers) {
             getPreferenceScreen().addPreference(
                     new ServerPreference(this)
@@ -113,6 +124,7 @@ public class MainSettingsActivity extends PreferenceActivity {
                 serverNames.add(serverSetting.getName());
             }
         }
+        //*/
     }
 
     // Added 03-07-16
