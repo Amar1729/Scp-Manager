@@ -35,19 +35,19 @@
 
         <!-- Settings activities -->
         <activity
-            android:name=".MainSettingsActivity"
+            android:name=".settings.MainSettingsActivity"
             android:theme="@style/DefaultToolbar"
             android:parentActivityName="com.gtstudios.amar.scphelper.MainPage">
         </activity>
         <activity
-            android:name=".ServerSettingsActivity"
+            android:name=".settings.ServerSettingsActivity"
             android:theme="@style/DefaultToolbar"
-            android:parentActivityName=".MainSettingsActivity">
+            android:parentActivityName=".settings.MainSettingsActivity">
         </activity>
         <activity
-            android:name=".WatchSettingsActivity"
+            android:name=".settings.WatchSettingsActivity"
             android:theme="@style/DefaultToolbar"
-            android:parentActivityName=".MainSettingsActivity">
+            android:parentActivityName=".settings.MainSettingsActivity">
         </activity>
 
         <!-- File Chooser Activity (not working yet? -->
