@@ -1,18 +1,24 @@
 package com.gtstudios.amar.scphelper;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.gtstudios.amar.scphelper.settings.MainSettingsActivity;
+
 public class MainPage extends AppCompatActivity {
+
+    private int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,8 @@ public class MainPage extends AppCompatActivity {
             }
         });
         //*/
+
+        counter = 0;
     }
 
     @Override
@@ -69,6 +77,9 @@ public class MainPage extends AppCompatActivity {
             // Ask for confirmation, then send
             Toast.makeText(this, "Files sent! Woo! (not really tho yet)", Toast.LENGTH_SHORT).show();
 
+            // Attempt to write user settings?
+            showUserSettings();
+
             return true;
         }
 
@@ -81,9 +92,38 @@ public class MainPage extends AppCompatActivity {
         public void onClick(View v) {
             Toast.makeText(MainPage.this, "I will attempt to add a torrent :(", Toast.LENGTH_SHORT).show();
 
+            TextView t = (TextView) findViewById(R.id.txtbox);
+            t.setText("Hallo: " + counter);
+            counter++;
+
             // This probably doesn't work yet - does FPH need a layout?
             //Intent intent = new Intent(MainPage.this, FilePickerHelper.class);
             //startActivity(intent);
         }
     };
+
+    private void showUserSettings() {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        //StringBuilder builder = new StringBuilder();
+        String builder;
+
+        /*
+        * edit.remove("server_name_" + max);
+        //edit.remove("server_type_" + max);
+        edit.remove("server_address_" + max);
+        edit.remove("server_localaddress_" + max);
+        edit.remove("server_localnetwork_" + max);
+        edit.remove("server_port_" + max);
+        edit.remove("server_user_" + max);
+        edit.remove("server_pass_" + max);
+        */
+
+        builder = "\n Nickname: " + prefs.getString("server_name", "NULL") +
+                "\n Username: " + prefs.getString("server_user", "NULL") +
+                "\n Address: " + prefs.getString("server_address", "NULL");
+
+        TextView t = (TextView) findViewById(R.id.txtbox);
+        t.setText(builder);
+    }
 }
